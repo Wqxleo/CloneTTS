@@ -8,7 +8,7 @@
 <body>
     <h1>Audio Demo</h1>
     <audio controls>
-        <source src="audio_demo/gpt_sovits_cheerful_01020001001.wav" type="audio/wav">
+        <source src="gpt_sovits_cheerful_01020001001.wav" type="audio/wav">
         Your browser does not support the audio element.
     </audio>
 </body>
