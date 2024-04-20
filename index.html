@@ -3,13 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Demo</title>
+    <title>RFWave Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            margin: 20px;
+            padding: 20px
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        td, th {
+            text-align: center;
+            padding: 4px;
+        }
+        audio {
+            margin: 0 10px;
+        }
+        .abstract, .title {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        .abstract-title {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .abstract-text, .title-text {
+            text-align: justify;
+        }
+    </style>
 </head>
+
+<div class="title">
+    <h1>RFWave: Multi-band Rectified Flow for Audio Waveform Reconstruction</h1>
+</div>
+<div class="abstract">
+    <p class="abstract-title">Abstract</p>
+    <p class="abstract-text">Recent advancements in generative modeling have led to significant progress in audio waveform reconstruction from diverse representations. Although diffusion models have been used for reconstructing audio waveforms, they tend to exhibit latency issues because they operate at the level of individual sample points and require a relatively large number of sampling steps. In this study, we introduce RFWave, a novel multi-band Rectified Flow approach that reconstructs high-fidelity audio waveforms from Mel-spectrograms. RFWave is distinctive for generating complex spectrograms and operating at the frame level, processing all subbands concurrently to enhance efficiency. Thanks to Rectified Flow, which aims for a flat transport trajectory, RFWave requires only 10 sampling steps. Empirical evaluations demonstrate that RFWave achieves exceptional reconstruction quality and superior computational efficiency, capable of generating audio at a speed 90 times faster than real-time. <a href="https://github.com/bfs18/rfwave">Code is available here.</a></p>
+</div>
+
+    <br>
+    <br>
 <body>
-    <h1>Audio Demo</h1>
-    <audio controls>
-        <source src="gpt_sovits_cheerful_01020001001.wav" type="audio/wav">
-        Your browser does not support the audio element.
-    </audio>
-</body>
+    <h3>Speech Reconstruction of Single Person</h3>
+    <p>The model is trained and tested on <a href="https://keithito.com/LJ-Speech-Dataset/">LJSpeech</a>.
+    <table>
+        <tr>
+            <th>Index</th>
+<th>Reference</th><th>Text</th><th>Vocos</th><th>RFWave</th></tr>
+<tr><td>1</td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td></tr>
+<tr><td>2</td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td></tr>
+<tr><td>3</td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td></tr>
+<tr><td>4</td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td></tr>
+<tr><td>5</td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td></tr>
+<tr><td>6</td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td></tr>
+<tr><td>7</td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td></tr>
+<tr><td>8</td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td></tr>
+<tr><td>9</td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td><td><audio controls><source src="1.wav" type="audio/wav"></audio></td></tr>
+
+    </table>1.wav
+    <br>
+    <br>
+
+
+</body>1.wav
 </html>
